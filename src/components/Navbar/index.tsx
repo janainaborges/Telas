@@ -5,7 +5,7 @@ import Notification from "../Notification";
 import { Link } from "react-router-dom";
 import backIcon from "../../assets/back.png";
 import burguerIcon from "../../assets/burguer.png";
-import { H1, H2, Span } from "../../shared/themes/heading";
+import { H1, H2 } from "../../shared/themes/heading";
 
 interface NavbarI {
   changeNav: "N" | "P" | "T";
@@ -34,7 +34,7 @@ const NavBar: React.FC<NavbarI> = ({ changeNav, name, links }) => {
         </Start>
         {navType === "N" ? (
           <Notification notification />
-        ) : "P" ? (
+        ) : navType === "P" ? (
           <Icon bg={burguerIcon} />
         ) : (
           "NULL"
